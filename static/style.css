@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.hidden {
+    display: none;
+}
+
+#contextMenu {
+    width: 150px;
+    z-index: 1000;
+}
+.note-list {
+    display: flex;
+    flex-direction: column;
+}
+input:checked + .dot {
+    transform: translateX(100%);
+}
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+.version-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: background 0.2s;
+}
+
+.version-item:hover {
+    background: #f0f0f0;
+}
+
+.version-timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.restore-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.restore-button:hover {
+    background-color: #45a049;
+}
+#commandPalette {
+    display: none;
+}
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #3b82f6;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    transform: translateX(26px);
+}
